@@ -1,0 +1,24 @@
+<!--Employee list-->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-lg-offset-3">
+            <h1>My Directive Example</h1>
+        </div>
+        <div class="col-lg-6 col-lg-offset-3">
+            <table class="table table-bordered table-striped ">
+                <!-- Table Heading -->
+                <tr>
+                    <th>Index</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                </tr>
+                <!-- Looping through employee object -->
+                <tr *ngFor="let emp of employees; let i=index">
+                    <td>{{ i + 1 }}</td>
+                    <td>{{ emp.firstName }}</td>
+                    <td>{{ emp.lastName }}</td>
+                </tr>
+            </table>
+        </div>
+    </div><!-- .row -->
+</div><!-- .container -->
