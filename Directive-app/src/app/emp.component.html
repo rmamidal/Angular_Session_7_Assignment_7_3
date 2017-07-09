@@ -13,11 +13,13 @@
                     <th>Last Name</th>
                 </tr>
                 <!-- Looping through employee object -->
-                <tr *ngFor="let emp of employees; let i=index">
-                    <td>{{ i + 1 }}</td>
+                <ng-template ngFor let-emp [ngForOf]="employees" let-i="index">
+                <tr>
+                    <td hoverOverElement> <b>{{ i + 1 }}</b></td><!-- Hover Over directive added to index-->
                     <td>{{ emp.firstName }}</td>
                     <td>{{ emp.lastName }}</td>
                 </tr>
+                </ng-template>
             </table>
         </div>
     </div><!-- .row -->
